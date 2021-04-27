@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Logo from './Logo';
 import List from './List';
 import CreateTastk from './CreateTastk';
 import FilterArray from './FilterArray';
@@ -36,18 +37,21 @@ function App() {
 
   if (!tasks) return <></>;
   return (
-    <div className="App">
-      <CreateTastk 
-        tasks={tasks} 
-        saveTaskDataCallback={saveTaskData}
-      />
-      <FilterArray 
-        initialTask={initialTask}
-        tasks={tasks} 
-        saveTaskDataCallback={saveTaskFilterData}
-      />
-      <List tasks={tasksFiltered} />
-    </div>
+    <>
+      <Logo />
+      <div className="App">
+        <CreateTastk 
+          tasks={tasks} 
+          saveTaskDataCallback={saveTaskData}
+        />
+        <FilterArray 
+          initialTask={initialTask}
+          tasks={tasks} 
+          saveTaskDataCallback={saveTaskFilterData}
+        />
+        <List tasks={tasksFiltered} />
+      </div>
+    </>
   );
 }
 

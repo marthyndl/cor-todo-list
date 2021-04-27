@@ -1,5 +1,6 @@
 {
   "name": "cor-todo-list",
+  "author": "Martín D. Lopez Front End Developer",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
