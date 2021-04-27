@@ -35,6 +35,11 @@ function App() {
     setTaskFiltered(filterArrayTask);
   };
 
+  const saveTaskListData = (ListArrayTask) => {
+    setTask(ListArrayTask);
+    setTaskFiltered(ListArrayTask);
+  };
+
   if (!tasks) return <></>;
   return (
     <>
@@ -49,7 +54,7 @@ function App() {
           tasks={tasks} 
           saveTaskDataCallback={saveTaskFilterData}
         />
-        <List tasks={tasksFiltered} saveTaskDataCallback={saveTaskFilterData} />
+        <List tasks={tasksFiltered} saveTaskDataCallback={saveTaskListData} />
       </div>
     </>
   );
