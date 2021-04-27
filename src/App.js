@@ -1,23 +1,52 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import List from './List';
+import CreateTastk from './CreateTastk';
+import FilterArray from './FilterArray';
 import './App.css';
 
+const initialTask = [
+  { 
+    id: 1, 
+    name: 'Diseñar banner', 
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
+    priority: 'Baja', 
+    stateTask: 'En proceso' 
+  },
+  { 
+    id: 2, 
+    name: 'Desarrollar tooltip', 
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 
+    priority: 'Media', 
+    stateTask: 'En proceso' 
+  },
+];
+
 function App() {
+  const [tasks, setTask] = useState(initialTask);
+  const [tasksFiltered, setTaskFiltered] = useState(initialTask);
+
+  const saveTaskData = (taskData) => {
+    setTask([...tasks, taskData]);
+    setTaskFiltered([...tasks, taskData]);
+  };
+
+  const saveTaskFilterData = (filterArrayTask) => {
+    setTaskFiltered(filterArrayTask);
+  };
+
+  if (!tasks) return <></>;
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CreateTastk 
+        tasks={tasks} 
+        saveTaskDataCallback={saveTaskData}
+      />
+      <FilterArray 
+        initialTask={initialTask}
+        tasks={tasks} 
+        saveTaskDataCallback={saveTaskFilterData}
+      />
+      <List tasks={tasksFiltered} />
     </div>
   );
 }

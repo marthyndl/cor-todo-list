@@ -1,0 +1,14 @@
+.filterSubContainer {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.filterSection {
+    display: grid;
+    margin: 10px 20px 10px 0;
+}
+
+.filterTitle {
+    justify-content: flex-start;
+    display: flex;
+}

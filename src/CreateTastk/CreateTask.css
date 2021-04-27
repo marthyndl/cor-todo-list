@@ -1,0 +1,12 @@
+.subContainerCreateElement {
+    justify-content: space-between;
+    display: flex;
+}
+.subContainerCreate {
+    margin: 10px 0;
+}
+
+.textArea {
+    width: 100%;
+    height: 100%;
+}

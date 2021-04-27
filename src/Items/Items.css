@@ -1,0 +1,35 @@
+.itemContainer {
+    border-style: groove;
+    margin: 20px 0;
+}
+
+.subContainerState {
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px 20px 10px 10px;
+}
+
+.subContainerDescription {
+    display: grid;
+    justify-content: flex-start;
+    margin: 10px 20px 10px 10px;
+}
+
+.subContainerDescriptionSpan {
+    display: flex;
+    margin: 5px 0;
+}
+
+.subContainerDescriptionDiv {
+    text-align: left;
+}
+
+.sectionState{
+    margin: 0 20px 0 0;
+}
+
+.itemTitle {
+    justify-content: flex-start;
+    display: flex;
+    margin: 10px;
+}
