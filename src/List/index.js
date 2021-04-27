@@ -3,9 +3,10 @@ import Items from '../Items';
 import './List.scss';
 
 const List = ({ tasks, saveTaskDataCallback }) => {
+
     const handleRemoveTask = (idx) => {
         let nextTasksData = tasks.slice();
-        delete nextTasksData[idx];
+        delete nextTasksData[idx-1];
         saveTaskDataCallback(nextTasksData);
     };
 
