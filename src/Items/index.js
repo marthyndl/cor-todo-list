@@ -1,10 +1,13 @@
 import React from 'react';
 import './Items.scss';
 
-const Items = ({ task }) => {
-    const { name, description, priority, stateTask } = task;
+const Items = ({ task, handleRemoveTask }) => {
+    const { id, name, description, priority, stateTask } = task;
     return (
-        <div className="item">
+        <div 
+            className="item"
+            onClick={() => handleRemoveTask(id)}
+        >
             <div className="item__state">
                 <span>Prioridad: {priority}</span>
                 <span>Estado: {stateTask}</span>

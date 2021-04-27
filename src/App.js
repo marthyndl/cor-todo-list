@@ -49,7 +49,7 @@ function App() {
           tasks={tasks} 
           saveTaskDataCallback={saveTaskFilterData}
         />
-        <List tasks={tasksFiltered} />
+        <List tasks={tasksFiltered} saveTaskDataCallback={saveTaskFilterData} />
       </div>
     </>
   );
