@@ -1,0 +1,29 @@
+.item {
+    border-style: groove;
+    margin: 20px 0;
+    &__state {
+        display: flex;
+        justify-content: flex-start;
+        margin: 10px 20px 10px 10px;
+        span {
+            margin: 0 20px 0 0;
+        }
+    }
+    &__description {
+        display: grid;
+        justify-content: flex-start;
+        margin: 10px 20px 10px 10px;
+        span {
+            display: flex;
+            margin: 5px 0;
+        }
+        div {
+            text-align: left;
+        }
+    }
+    &__title {
+        display: grid;
+        justify-content: flex-start;
+        margin: 10px 20px 10px 10px;
+    }
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import './FilterArray.css';
+import './FilterArray.scss';
 
 const FilterArray = ({ tasks, saveTaskDataCallback, initialTask }) => {
     const orderByType = (e) => {
@@ -22,10 +22,10 @@ const FilterArray = ({ tasks, saveTaskDataCallback, initialTask }) => {
     };
 
     return (
-        <div>
-            <h3 className="filterTitle">Filtrar por:</h3>
-            <div className="filterSubContainer">
-                <div className="filterSection">
+        <div className="filter">
+            <h3 className="filter__title">Filtrar por:</h3>
+            <div className="filter__subcontainer">
+                <div className="filter__subcontainer__section">
                     <p>Prioridad</p> 
                     <select
                     name="priority"
@@ -39,7 +39,7 @@ const FilterArray = ({ tasks, saveTaskDataCallback, initialTask }) => {
                     <option value="Alta">Alta</option>
                     </select>
                 </div>
-                <div className="filterSection">
+                <div className="filter__subcontainer__section">
                     <p>Estado</p>
                     <select
                     name="stateTask"

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './CreateTask.css';
+import './CreateTask.scss';
 
 const CreateTask = ({ tasks, saveTaskDataCallback }) => {
     const [newTask, setNewTask] = useState({
@@ -33,8 +33,8 @@ const CreateTask = ({ tasks, saveTaskDataCallback }) => {
     }
     
     return (
-        <div>
-            <div className="subContainerCreateElement subContainerCreate" >
+        <div className="createTask">
+            <div className="createTask__header createTask__body" >
                 <input 
                     name="name"
                     placeholder='Titulo' 
@@ -61,15 +61,14 @@ const CreateTask = ({ tasks, saveTaskDataCallback }) => {
                     <option value="Finalizado">Finalizado</option>
                 </select>
             </div>
-            <div className="subContainerCreate">
-                <textarea 
-                    className="textArea"
+            <div className="createTask__body">
+                <textarea
                     name="description"
                     placeholder='Descripción' 
                     onChange={(e) => handleChange(e)}
                 />
             </div>
-            <div className="subContainerCreate">
+            <div className="createTask__body">
                 <button
                     disabled={(name === '' || description === '' || priority === '' || stateTask === '') ? true : false}
                     onClick={handleAdd}

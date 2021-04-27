@@ -1,18 +1,18 @@
 import React from 'react';
-import './Items.css'
+import './Items.scss';
 
 const Items = ({ task }) => {
     const { name, description, priority, stateTask } = task;
     return (
-        <div className="itemContainer">
-            <div className="subContainerState">
-                <span className="sectionState">Prioridad: {priority}</span>
-                <span className="sectionState">Estado: {stateTask}</span>
+        <div className="item">
+            <div className="item__state">
+                <span>Prioridad: {priority}</span>
+                <span>Estado: {stateTask}</span>
             </div>
-            <h3 className="itemTitle">Titulo: {name}</h3>
-            <div className="subContainerDescription">
-                <span className="subContainerDescriptionSpan">Descripción:</span>
-                <div className="subContainerDescriptionDiv">{description}</div>
+            <h3 className="item__title">Titulo: {name}</h3>
+            <div className="item__description">
+                <span>Descripción:</span>
+                <div>{description}</div>
             </div>
         </div>
     )

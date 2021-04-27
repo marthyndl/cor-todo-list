@@ -1,0 +1,14 @@
+.filter {
+    &__title {
+        justify-content: flex-start;
+        display: flex;
+    }
+    &__subcontainer {
+        display: flex;
+        justify-content: flex-start;
+        &__section {
+            display: grid;
+            margin: 10px 20px 10px 0;
+        }
+    }
+}

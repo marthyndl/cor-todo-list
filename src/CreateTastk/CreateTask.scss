@@ -1,0 +1,13 @@
+.createTask {
+    &__body {
+        margin: 10px 0;
+        textArea {
+            width: 100%;
+            height: 100px;
+        }
+    }
+    &__header {
+        justify-content: space-between;
+        display: flex;
+    }
+}

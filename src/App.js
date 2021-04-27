@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import List from './List';
 import CreateTastk from './CreateTastk';
 import FilterArray from './FilterArray';
-import './App.css';
+import './App.scss';
 
 const initialTask = [
   { 

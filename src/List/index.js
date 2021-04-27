@@ -1,6 +1,6 @@
 import React from 'react';
 import Items from '../Items';
-import './List.css';
+import './List.scss';
 
 const List = ({ tasks }) => {
     return (
